@@ -4,6 +4,7 @@ import android.content.Context;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 
@@ -91,18 +92,16 @@ public class SocketAdapter extends AbsAdapter<ChatMessage> {
         return convertView;
     }
 
-    public static class SendHolder extends BaseAdapter.ViewHolder{
+    public static class SendHolder {
         private TextView tvContent;
         public SendHolder(View view) {
-            super(view);
             tvContent = (TextView) view.findViewById(R.id.content_send);
         }
     }
 
-    public static class ReceiveHolder extends BaseAdapter.ViewHolder{
+    public static class ReceiveHolder{
         private TextView tvContent;
         public ReceiveHolder(View view) {
-            super(view);
             tvContent = (TextView) view.findViewById(R.id.content_receive);
         }
     }
